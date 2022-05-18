@@ -1,0 +1,68 @@
+
+.chief-top-div {
+  margin-bottom: 1vh;
+}
+
+.chiefs-title {
+  margin-bottom: 0.8em;
+}
+
+.top-chiefs-container {
+
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)) ;
+  grid-gap:1.5em;
+
+  .chief-card {
+    display: flex;
+    height: 130px;
+    background: var(--background-color);
+    img {
+      height: 100%;   
+      width: 100%;   
+      border-radius: 5px;
+      box-shadow: 1px 3px 6px var(--shadow-color);
+    }
+    .chief-card-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+      padding-left: 1em;
+      padding-bottom: 0.5em;
+
+      .chief-card-name {
+        color: var(--text-color);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-shadow:1px 3px 2px var(--shadow-color) ;
+      }
+      .chief-recipe-count, .cheif-cilsine {
+        color:var(--text-light)
+      }
+      .chief-icon {
+        font-size: 1.2em;
+        svg {
+          cursor: pointer;
+          padding: 0 .2em;
+          &:hover {
+            transform: scale(1.2);
+          }
+          &:nth-child(1) {
+            color:#0063f7;
+          }
+          &:nth-child(2) {
+            color:#13b4ff;
+          }
+          &:nth-child(3) {
+            color:#ff0056;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

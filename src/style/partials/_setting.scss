@@ -1,0 +1,51 @@
+div.setting-page {
+  padding-inline: 15vw;
+  padding-block: 1.5em;
+  padding-block-end: 18.53vh;
+
+  div.setting-section {
+    h2.setting-title {
+      color: var(--text-color);
+      font-size:1.75em;
+      margin-top: 0.5em ;
+      margin-bottom: 0.75em;
+    }
+    div.options-container {
+      box-shadow: 3px 3px 6px var(--shadow-color);
+      border-left: 0.6em solid var(--primary-color);
+      border-radius: 5px;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      div.option-light {
+        background:#fff ;
+      }
+      div.option-dark {
+        background: rgb(29,29,29);
+      }
+      div.option {
+        height:3.5em;
+        width: 3.5em;
+        box-shadow: 3px 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div.check {
+          width: 2em;
+          height: 2em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50px;
+          box-shadow: 3px 3px 6px var(--shadow-color);
+          background: var(--primary-color);
+          svg {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+:root {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0,0,0,0.2);
+  --primary-color: rgb(255,0,86);
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+h1,h2 {
+  color: var(--text-color);
+}
+p {
+  color: var(--text-light);
+}
+
+
+body {
+  font-size: var(--font-size);
+  padding-top: 55px;
+  background: var(--background-light);
+}
+a {
+  text-decoration: none;
+  }
+
+.custom-image {
+  background: rgb(177, 163, 163);
+  height: 0;
+  width: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+button{
+  border: none;
+  outline: none;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+  padding: .6em 1em;
+  border-radius: 9px;
+  box-shadow: 2px 3px 6px var(--shadow-color);
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 5px var(--text-light); 
+  }
+}
+
+@import './partials/navbar';
+@import './partials/herosection';
+@import './partials/improve-section';
+@import './partials/quote-section';
+@import './partials/top-chiefs';
+@import './partials/footer';
+@import './partials/animation';
+@import './partials/recipes-search';
+@import './partials/recipes-main';
+@import './partials/setting';
+
+@media screen and (max-width:768px) {
+ .navbar {
+    .nav-link {
+        display: none;
+      }
+    
+    div.sidebar-btn {
+      display: block;
+    }
+ }
+
+ div.hero.section {
+  display: flex;
+  flex-wrap: wrap;
+  .col.typography {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+  .col.gallery{
+    width: 100%;
+  }
+ }
+
+ div.improve.section {
+   display: flex;
+   flex-direction: column;
+    .col.img {
+      width: 100%;
+    }
+  
+    .col.typography {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+ }
+
+ .chief-card {
+   box-shadow: 1px 3px 3px var(--shadow-color);
+   border-radius: 10px;
+ }
+
+ div.footer.container {
+   grid-template-columns: repeat(4, 1fr);
+    .footer-section:nth-child(1) {
+      grid-column: span 4;
+    }
+    .footer-section:nth-child(2), .footer-section:nth-child(3) {
+      grid-column: span 2;
+    }
+   }
+}
