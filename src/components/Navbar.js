@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
 
-    <Fragment>
+    <React.Fragment>
       <div className="navbar container">
         <a href="/" className='logo'>F<span>oo</span>diesHub</a>
         <div className="nav-link">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
       {showSidebar && <Sidebar close = {close} links={links} />}
-    </Fragment>
+    </React.Fragment>
 
   )
 }
